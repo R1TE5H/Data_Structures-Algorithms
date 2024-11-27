@@ -15,7 +15,7 @@ Imagine you're looking for a word in a dictionary:
    - After this page? Look in the second half
    - Exactly on this page? You found it!
 
-Binary Searching algorithms are the same. They check the middle of the list to see if it is the target. If it is the algorithm is complete. If the middle value is less than the target, the algorithm continues with only the top half of the list, if it is less, it only focuses on the bottom half. The algorithm continues doing this until it either finds the value or completes the entire array.
+Binary Searching Algorithms are the same. They check the middle of the list to see if it is the target. If it is, the algorithm is complete. If the middle value is less than the target, the algorithm continues with only the top half of the list, if it is less, it only focuses on the bottom half. The algorithm continues doing this until it either finds the value or completes the entire array.
 
 ## Real-World Example
 
