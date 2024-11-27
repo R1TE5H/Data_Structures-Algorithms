@@ -8,7 +8,7 @@ const binarySearch = (list: number[], target: number): string => {
     let mid: number = Math.floor((left + right) / 2);
 
     if (list[mid] === target)
-      return `The target (${target}) was found at index number ${mid}`;
+      return `${target} was found at index number ${mid}`;
     else if (list[mid] < target) {
       left = mid + 1;
     } else {
