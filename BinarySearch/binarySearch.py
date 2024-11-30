@@ -1,7 +1,6 @@
 import math
 from typing import List
 
-
 def binarySearch(arr: List[int], target: int) -> str:
     if len(arr) == 0:
         return "The list provided is empty"

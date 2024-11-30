@@ -1,5 +1,4 @@
 package Fibonacci_Sequence;
-
 import java.util.*;
 
 public class Fibonacci {
