@@ -3,12 +3,15 @@
 In JavaScript, Arrays are dynamic in data type and size. This means that the data can be of any type, and can change after creation.
 
 1. **Creating Arrays**
+
    - Because arrays are dynamic and mutable, they can be created with or without initial values.
-     ```javascript
-     const arr1 = []; // Creates an empty array
-     const arr2 = [1, "A", true, { name: "John" }]; // Creates an array with initial values
-     const arr3 = [1, 2, 3, ...arr2]; //  Creates an array with initial values, and spreads the values from arr2
-     ```
+
+   ```javascript
+   const arr1 = []; // Creates an empty array
+   const arr2 = [1, "A", true, { name: "John" }]; // Creates an array with initial values
+   const arr3 = [1, 2, 3, ...arr2]; //  Creates an array with initial values, and spreads the values from arr2
+   ```
+
 2. **Adding and Removing Elements**
 
    - `push(element_1, element_2, ...)` adds the parameter element(s) to the end of the array.
