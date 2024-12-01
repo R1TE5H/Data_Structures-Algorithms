@@ -80,7 +80,7 @@ In JavaScript, Arrays are dynamic in data type and size. This means that the dat
 4. **Iterating Arrays**
 
    - `map((element, index, array) => (...))` applies a callback function to each element in the array and returns an new array with the transformed elements.
-   - The `element`, `index`, and `array` arguments enable the callback to access the elements and their indexes, as well as the original array. This allows the array to be edited in place. `index` and `array` are optional parameters.
+   - The `element`, `index`, and `array` arguments enable the callback to access the elements and their indexes, as well as the original array. `index` and `array` are optional parameters.
 
    ```javascript
    const arr1 = [1, 2, 3, 4];
