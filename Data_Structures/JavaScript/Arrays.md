@@ -12,7 +12,17 @@ In JavaScript, Arrays are dynamic in data type and size. This means that the dat
    const arr3 = [1, 2, 3, ...arr2]; //  Creates an array with initial values, and spreads the values from arr2
    ```
 
-2. **Adding and Removing Elements**
+2. **Accessing Elements**
+
+   - `at()
+indexOf()
+includes()
+join()
+reverse()
+lastIndexOf()
+concat()`
+
+3. **Adding and Removing Elements**
 
    - `push(element_1, element_2, ...)` adds the parameter element(s) to the end of the array.
 
@@ -50,7 +60,7 @@ In JavaScript, Arrays are dynamic in data type and size. This means that the dat
    // arr --> [2, 3, 4]
    ```
 
-3. **Modifying Arrays**
+4. **Modifying Arrays**
 
    - `splice(start, end)` deletes elements in the array starting at the start parameter index and ending at the end parameter index (not inclusive).
    - The method will return a new array containing the deleted elements.
@@ -77,7 +87,7 @@ In JavaScript, Arrays are dynamic in data type and size. This means that the dat
    // arr3 --> [2, 3, 4]
    ```
 
-4. **Iterating Arrays**
+5. **Iterating Arrays**
 
    - `map((element, index, array) => (...))` applies a callback function to each element in the array and returns an new array with the transformed elements.
    - The `element`, `index`, and `array` arguments enable the callback to access the elements and their indexes, as well as the original array. `index` and `array` are optional parameters.
@@ -102,7 +112,7 @@ In JavaScript, Arrays are dynamic in data type and size. This means that the dat
    // arr1 --> [5, 6, 7, 8]
    ```
 
-5. **Filtering and Searching Arrays**
+6. **Filtering and Searching Arrays**
    - `filter()`
    ```javascript
    const arr1 = [];
