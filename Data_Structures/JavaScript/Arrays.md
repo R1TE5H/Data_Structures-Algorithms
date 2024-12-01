@@ -138,7 +138,7 @@ In JavaScript, Arrays are dynamic in data type and size. This means that the dat
    // arr4 --> [4, 3, 2, 1]
    ```
 
-   -`join(separator)` returns a string containing each element of the array separated by the separator parameter.
+   - `join(separator)` returns a string containing each element of the array separated by the separator parameter.
 
    ```javascript
    const arr = [1, 2, 3, 4];
