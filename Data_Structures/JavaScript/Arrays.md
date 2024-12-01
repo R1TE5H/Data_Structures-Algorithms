@@ -76,3 +76,32 @@ In JavaScript, Arrays are dynamic in data type and size. This means that the dat
    // arr2 --> [2, 3]
    // arr3 --> [2, 3, 4]
    ```
+
+4. **Iterating Arrays**
+
+   - `map((element, index) => (...))` applies a callback function to each element in the array and returns an new array with the transformed elements.
+   - The `element` and `index` arguments enable the callback function to access the array's elements and index, however, index is optional.
+
+   ```javascript
+   const arr1 = [1, 2, 3, 4];
+   const arr2 = arr1.map((element) => (element += 3));
+   // arr1 --> [1, 2, 3, 4]
+   // arr2 --> [4, 5, 6, 7]
+   ```
+
+   - `forEach((element, index, array) => ...)` applies a callback function to each element in the array and mutates the original array.
+   - The `element`, `index`, and `array` arguments enable the callback to access the elements and their indexes, as well as the original array. This allows the array to be edited in place. `index` and `array` are optional parameters.
+
+   ```javascript
+   const arr1 = [1, 2, 3, 4];
+   arr1.forEach((element) => console.log(element));
+   arr1.forEach((element, index, array) => (array[index] = element + 4));
+
+   // arr1 --> [5, 6, 7, 8]
+   ```
+
+5. **Filtering and Searching Arrays**
+   - `filter()`
+   ```javascript
+   const arr1 = [];
+   ```
