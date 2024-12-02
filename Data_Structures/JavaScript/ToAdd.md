@@ -8,6 +8,8 @@
 
 # Stacks (LIFO)
 
+# Linked List (Single and Doubly)
+
 # Trees
 
 # Heaps
