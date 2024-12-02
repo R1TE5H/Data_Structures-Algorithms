@@ -54,6 +54,14 @@ In JavaScript, Arrays are dynamic in data type and size. This means that the dat
    // val --> 4
    ```
 
+   - `reduce((accumulator, element) => (...), initial_value)` returns a single value after performing actions using the elements of the array.
+   - `accumulator` is the parameter that will be returned and `initial_value` is the initial value of the accumulator.
+
+   ```javascript
+   const arr = [1, 2, 3, 4];
+   const sum = arr.reduce((sum, element) => sum + element, 0);
+   ```
+
 3. **Adding and Removing Elements**
 
    - `push(element_1, element_2, ...)` adds the parameter element(s) to the end of the array.
@@ -205,7 +213,39 @@ In JavaScript, Arrays are dynamic in data type and size. This means that the dat
    // val --> "Hello"
    ```
 
-7. **Destructuring and Spread Operator**
-   - The Spread Operator (`...arr`) is
-   - Array Destructuring ([element_1, element_2]) is
-   - `reduce()`
+7. **Destructuring Arrays**
+
+   - Array Destructuring is a quick and easy way to access and assign specific elements within an array to a new variable.
+   - When creating the variables, wrap them within braces and set the variable equal to the array.
+
+   ```javascript
+   const arr = ["Apples", "Oranges", "Bananas", "Cherries"];
+   const [first, second, third, fourth] = arr;
+
+   // first --> "Apples"
+   // second --> "Oranges"
+   // third --> "Bananas"
+   // fourth --> "Cherries"
+   ```
+
+   - It is important to know that Array Destructuring relies on the order of the array. This means that the first variable in the destructuring is initialized with the first element in the array, the second variable to the second element, and so on.
+   - To get avoid having to copy each and every element we can skip specific elements by simply not adding a variable to store the data.
+
+   ```javascript
+   const arr = ["Apples", "Oranges", "Bananas", "Cherries"];
+   const [a, , c, d] = arr;
+
+   // a --> "Apples"
+   // c --> "Bananas"
+   // d --> "Cherries"
+   ```
+
+   - We can also use the rest operator (`...`) to assign the remaining portion of an array to a single variable. This allows us to destructure part of an array and assign the rest to a single variable.
+
+   ```javascript
+   const arr = ["Apples", "Oranges", "Bananas", "Cherries"];
+   const [a, ...rest] = arr;
+
+   // a --> "Apples"
+   // rest --> ["Oranges", "Bananas", "Cherries"]
+   ```
