@@ -8,12 +8,12 @@ In JavaScript, objects are both a dynamic data structure containing key-value pa
 
    ```javascript
    const obj = {
-     name: "Tony Stark",
+     name: "Tony",
      age: 35,
      greeting: () => console.log(`Hello, I'm ${name}`),
    };
 
-   // obj --> {name: "Tony Stark", age: 35, greeting: () => void}
+   // obj --> {name: "Tony", age: 35, greeting: () => void}
    ```
 
    - They can also be created as empty data-structures and assigned values later on.
@@ -22,11 +22,11 @@ In JavaScript, objects are both a dynamic data structure containing key-value pa
    const obj_1 = {};
    const obj_2 = new Object();
 
-   obj_1.name = "Steve Rogers";
-   obj_2.name = "Peggy Carter";
+   obj_1.name = "Steve";
+   obj_2.name = "Peggy ";
 
-   // obj_1 --> {name: "Steve Rogers"}
-   // obj_2 --> {name: "Peggy Carter"}
+   // obj_1 --> {name: "Steve"}
+   // obj_2 --> {name: "Peggy"}
    ```
 
    - Another common way they can be created is through a factor function -- a function that creates a returns a data type.
@@ -42,9 +42,9 @@ In JavaScript, objects are both a dynamic data structure containing key-value pa
        },
      };
    }
-   const object = createObject("Bruce Banner", 31, true);
+   const object = createObject("Bruce", 31, true);
 
-   // object --> {name: "Bruce Banner", age: 31, adult: true, greeting: () => void}
+   // object --> {name: "Bruce", age: 31, adult: true, greeting: () => void}
    ```
 
    - The final -- and most common across programming languages -- is creating objects using a constructor method.
@@ -67,10 +67,10 @@ In JavaScript, objects are both a dynamic data structure containing key-value pa
    - Dot Notation uses a period and the key to access the value.
 
    ```javascript
-   const obj = { name: "Peter Parker", age: 16 };
+   const obj = { name: "Peter", age: 16 };
    const name = obj.name;
 
-   // name --> "Peter Parker"
+   // name --> "Peter"
    ```
 
    - Bracket Notation uses braces -- the ones used to define an array -- and the key to access the value.
@@ -93,23 +93,23 @@ In JavaScript, objects are both a dynamic data structure containing key-value pa
    const obj = {};
    obj.name = "Bruce";
    obj.age = 30;
-   obj["home"] = "Gotham";
+   obj["home"] = "New York";
 
-   // obj --> { name: 'Bruce', age: 30, home: 'Gotham' }
+   // obj --> { name: 'Bruce', age: 30, home: 'New York City' }
 
    // Updating
    obj.name = "Clark";
-   obj["home"] = "Metropolis";
+   obj["home"] = "Boston";
 
-   // obj --> { name: 'Clark', age: 30, home: 'Metropolis' }
+   // obj --> { name: 'Clark', age: 30, home: 'Boston' }
    ```
 
    - To delete an object's property we must use the delete keyword and access the desired property
 
    ```javascript
-   const obj = { name: "Barry", home: "Central City", powers: "Speed" };
+   const obj = { name: "Barry", home: "DC", color: "red" };
    delete obj.home;
-   delete obj["powers"];
+   delete obj["color"];
 
    // obj --> { name: 'Barry' }
    ```
