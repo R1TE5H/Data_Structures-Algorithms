@@ -8,12 +8,12 @@ In JavaScript, objects are both a dynamic data structure containing key-value pa
 
    ```javascript
    const obj = {
-     name: "John Doe",
-     age: 21,
+     name: "Tony Stark",
+     age: 35,
      greeting: () => console.log(`Hello, I'm ${name}`),
    };
 
-   // obj --> {name: "John Doe", age: 21, greeting: () => void}
+   // obj --> {name: "Tony Stark", age: 35, greeting: () => void}
    ```
 
    - They can also be created as empty data-structures and assigned values later on.
@@ -22,11 +22,11 @@ In JavaScript, objects are both a dynamic data structure containing key-value pa
    const obj_1 = {};
    const obj_2 = new Object();
 
-   obj_1.name = "John Doe";
-   obj_2.name = "Jane Doe";
+   obj_1.name = "Steve Rogers";
+   obj_2.name = "Peggy Carter";
 
-   // obj_1 --> {name: "John Doe"}
-   // obj_2 --> {name: "Jane Doe"}
+   // obj_1 --> {name: "Steve Rogers"}
+   // obj_2 --> {name: "Peggy Carter"}
    ```
 
    - Another common way they can be created is through a factor function -- a function that creates a returns a data type.
@@ -42,9 +42,9 @@ In JavaScript, objects are both a dynamic data structure containing key-value pa
        },
      };
    }
-   const object = createObject("John Doe", 21, true);
+   const object = createObject("Bruce Banner", 31, true);
 
-   // object --> {name: "John Doe", age: 21, adult: true, greeting: () => void}
+   // object --> {name: "Bruce Banner", age: 31, adult: true, greeting: () => void}
    ```
 
    - The final -- and most common across programming languages -- is creating objects using a constructor method.
@@ -56,9 +56,9 @@ In JavaScript, objects are both a dynamic data structure containing key-value pa
        this.age = age;
      }
    }
-   const object = new Person("John", 21);
+   const object = new Person("Thor", 2100);
 
-   // object --> {name: "John", age: 21}
+   // object --> {name: "Thor", age: 2100}
    ```
 
 2. **Accessing Properties**
@@ -67,19 +67,19 @@ In JavaScript, objects are both a dynamic data structure containing key-value pa
    - Dot Notation uses a period and the key to access the value.
 
    ```javascript
-   const obj = { name: "John Doe", age: 21 };
+   const obj = { name: "Peter Parker", age: 16 };
    const name = obj.name;
 
-   // name --> "John Doe"
+   // name --> "Peter Parker"
    ```
 
    - Bracket Notation uses braces -- the ones used to define an array -- and the key to access the value.
 
    ```javascript
-   const obj = { name: "John Doe", age: 21 };
+   const obj = { name: "Leonardo", age: 19 };
    const age = obj["age"];
 
-   // age --> 21
+   // age --> 19
    ```
 
    - It is better two use Bracket Notation when the key is determined at run-time, the key is set to a variable, or the name of the property is not a valid JavaScript identifier (contains special characters). Dot Notation is considered more readable and better for other use cases.
