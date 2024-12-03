@@ -1,5 +1,5 @@
-const obj = { name: "Barry", home: "Central City", powers: "Speed" };
-delete obj.home;
-delete obj["powers"];
+const obj = { name: "", home: "", color: "" };
+const arr = Object.keys(obj);
+arr.forEach((element) => (obj[element] = "Iterated"));
 
 console.log(obj);

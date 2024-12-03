@@ -82,7 +82,37 @@ In JavaScript, objects are both a dynamic data structure containing key-value pa
    // age --> 19
    ```
 
-   - It is better two use Bracket Notation when the key is determined at run-time, the key is set to a variable, or the name of the property is not a valid JavaScript identifier (contains special characters). Dot Notation is considered more readable and better for other use cases.
+   It is better two use Bracket Notation when the key is determined at run-time, the key is set to a variable, or the name of the property is not a valid JavaScript identifier (contains special characters). Dot Notation is considered more readable and better for other use cases.
+
+   - `Object.entries(object)` returns a 2D array of all of the key-value pairs.
+   - The `object` parameter is the object you want to get the pairs of.
+
+   ```javascript
+   const obj = { name: "Donatello", age: 19 };
+   const arr = Object.entries(obj);
+
+   // arr --> [ [ 'name', 'Donatello' ], [ 'age', 19 ] ]
+   ```
+
+   - `Object.keys(object)` returns an array of all of the keys of the object.
+   - The `object` parameter is the object you want to get the pairs of.
+
+   ```javascript
+   const obj = { name: "Raphael", age: 19 };
+   const arr = Object.keys(obj);
+
+   // arr --> [ 'name', 'age' ]
+   ```
+
+   - `Object.values(object)` returns an array of all of the values of the object.
+   - The `object` parameter is the object you want to get the pairs of.
+
+   ```javascript
+   const obj = { name: "Michelangelo", age: 19 };
+   const arr = Object.values(obj);
+
+   // arr --> [ 'Michelangelo', 19 ]
+   ```
 
 3. **Adding, Updating, and Removing Properties**
 
@@ -107,9 +137,32 @@ In JavaScript, objects are both a dynamic data structure containing key-value pa
    - To delete an object's property we must use the delete keyword and access the desired property
 
    ```javascript
-   const obj = { name: "Barry", home: "DC", color: "red" };
+   const obj = { name: "Barry", home: "Washington", color: "red" };
    delete obj.home;
    delete obj["color"];
 
    // obj --> { name: 'Barry' }
+   ```
+
+4. **Iterating Objects**
+
+   - To iterate through objects we can use `for in` loops. These are loops that allow us to quickly iterate through an object and perform complex actions.
+
+   ```javascript
+   const obj = { name: "", home: "", color: "" };
+   for (key in obj) {
+     obj[key] = "For Looped";
+   }
+
+   // obj --> { name: 'For Looped', home: 'For Looped', color: 'For Looped' }
+   ```
+
+   - We can also iterate objects by using an array of the keys to iterate.
+
+   ```javascript
+   const obj = { name: "", home: "", color: "" };
+   const arr = Object.keys(obj);
+   arr.forEach((element) => (obj[element] = "Iterated"));
+
+   // obj --> { name: 'Iterated', home: 'Iterated', color: 'Iterated' }
    ```
