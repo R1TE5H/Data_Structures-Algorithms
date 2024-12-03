@@ -114,6 +114,17 @@ In JavaScript, objects are both a dynamic data structure containing key-value pa
    // arr --> [ 'Michelangelo', 19 ]
    ```
 
+   - `in` is a keyword that is used to check if an object has a specific key. If the key is found, the command will return true, otherwise it will return false.
+
+   ```javascript
+   const obj = { name: "Splinter", age: 65 };
+   const bool = "name" in obj;
+   const bool2 = "color" in obj;
+
+   // bool --> true
+   // bool2 --> false
+   ```
+
 3. **Adding, Updating, and Removing Properties**
 
    - Object properties can be added or updated using Dot or Bracket Notation. The process for adding and updating is the same.

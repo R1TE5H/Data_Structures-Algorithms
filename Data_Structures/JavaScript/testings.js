@@ -1,5 +1,4 @@
-const obj = { name: "", home: "", color: "" };
-const arr = Object.keys(obj);
-arr.forEach((element) => (obj[element] = "Iterated"));
+const obj = { name: "Splinter", age: 65 };
+const bool = "name" in obj;
 
-console.log(obj);
+console.log(bool);
