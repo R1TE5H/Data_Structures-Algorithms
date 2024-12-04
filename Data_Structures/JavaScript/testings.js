@@ -1,4 +1,10 @@
-const obj = { name: "Splinter", age: 65 };
-const bool = "name" in obj;
+const object = {
+  street: "Yellow Brick Road",
+  zip: "11111",
+  city: "Emerald City",
+  country: "OZ",
+};
 
-console.log(bool);
+const { city, country: place, street, zip } = object;
+
+console.log(place);

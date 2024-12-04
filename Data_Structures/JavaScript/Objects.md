@@ -155,7 +155,38 @@ In JavaScript, objects are both a dynamic data structure containing key-value pa
    // obj --> { name: 'Barry' }
    ```
 
-4. **Iterating Objects**
+   - `Objects.merge(target, object1, object2, object3)` merges objects to create a new one.
+   - The `target` parameter determines where the merged objects will be sent, the `object` parameters determine the objects that need to be merged.
+
+   ```javascript
+   const object1 = { city: "Emerald City", country: "OZ" };
+   const object2 = { street: "Yellow Brick Road", zip: "11111" };
+   const merged = Object.assign({}, object1, object2); // Inline merged object initialization
+
+   const merged2 = {};
+   Object.assign(merged2, object1, object2); // Multiline assignment
+
+   // merged and merged2 --> { city: 'Emerald City',country: 'OZ',street: 'Yellow Brick Road',zip: '11111'}
+   ```
+
+4. **Advanced Object Property Methods**
+   Objects are very unique data structures, and as such, their mutability can be controlled.
+
+   - `Object.freeze(object)` prevents any property of the object from being modified and prevents any property from being added or removed from the object.
+
+   ```javascript
+   const object1 = { city: "Emerald City", country: "OZ" };
+   Object.freeze(object1);
+   ```
+
+   - `Object.seal(object)` prevents any properties from being added or removed, however, the properties can be modified.
+
+   ```javascript
+   const object1 = { city: "Emerald City", country: "OZ" };
+   Object.seal(object1);
+   ```
+
+5. **Iterating Objects**
 
    - To iterate through objects we can use `for in` loops. These are loops that allow us to quickly iterate through an object and perform complex actions.
 
@@ -177,3 +208,63 @@ In JavaScript, objects are both a dynamic data structure containing key-value pa
 
    // obj --> { name: 'Iterated', home: 'Iterated', color: 'Iterated' }
    ```
+
+6. **Cloning Objects**
+
+   - Like many other languages, Objects are passed by reference in JavaScript. This can be a problem when cloning objects because changes in the initial object will causes unwanted changes in the cloned object:
+
+   ```javascript
+   const objA = { a: 10 };
+   const objB = objA;
+   objB.a = 20;
+
+   // objB and objA --> { a: 20 }
+   ```
+
+   - To avoid this, we use a clone objects using the spread operator:
+
+   ```javascript
+   const objA = { a: 10 };
+   const objB = { ...objA };
+   objB.a = 20;
+
+   // objA --> { a: 10 }
+   // objB --> { a: 20 }
+   ```
+
+7. **Destructuring Objects**
+
+   - Object Destructuring is a quick and easy way to access and assign specific properties within an object to a new variable.
+   - When creating the variables, wrap them within curly braces and set the variable equal to the object.
+   - It is important to match the variable name to the property key -- this is how the object maps the property to the correct variable.
+
+   ```javascript
+   const object = {
+     street: "Yellow Brick Road",
+     zip: "11111",
+     city: "Emerald City",
+     country: "OZ",
+   };
+
+   const { city, country, street, zip } = object;
+   ```
+
+   - Sometimes the property's key can be clunky. We can reassign the name of the variable when destructuring the object:
+
+   ```javascript
+   const object = {
+     street_of_residence_where_you_live: "Yellow Brick Road",
+     zip: "11111",
+     city: "Emerald City",
+     country: "OZ",
+   };
+
+   const {
+     city,
+     country,
+     street_of_residence_where_you_live: address,
+     zip,
+   } = object;
+   ```
+
+   - With the above change, instead of having to call `street_of_residence_where_you_live` every time we want to access the value, we can simply call `address`
