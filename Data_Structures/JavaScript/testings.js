@@ -1,10 +1,9 @@
-const object = {
-  street: "Yellow Brick Road",
-  zip: "11111",
-  city: "Emerald City",
-  country: "OZ",
-};
+const map = new Map([
+  ["name", "Ross"],
+  ["age", 35],
+  ["city", "New York City"],
+]);
 
-const { city, country: place, street, zip } = object;
+const keys = [...map.entries()];
 
-console.log(place);
+console.log(keys);
