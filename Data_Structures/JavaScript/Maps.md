@@ -12,10 +12,9 @@ In JavaScript, Maps are a collection of Key-Value pairs (just like Objects). The
      ["age", 35],
      ["city", "New York City"],
    ]);
+   const map2 = new Map();
 
    // map --> Map(3) { 'name' => 'Ross', 'age' => 35, 'city' => 'New York City' }
-
-   const map2 = new Map();
    // map2 --> Map(0) {}
    ```
 
