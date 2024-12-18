@@ -1,9 +1,7 @@
 const map = new Map([
-  ["name", "Ross"],
-  ["age", 35],
+  ["name", "Monica"],
+  ["age", 33],
   ["city", "New York City"],
 ]);
 
-const keys = [...map.entries()];
-
-console.log(keys);
+console.log(map.size);
